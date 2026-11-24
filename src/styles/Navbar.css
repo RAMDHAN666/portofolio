@@ -1,0 +1,139 @@
+/* Modern Navbar */
+.pro-navbar {
+  background: #DCDCDC;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Kanit', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo, .navbar-logo .logo-text {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-logo .logo-text {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #000000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  background: #000000;
+  color: #fff;
+}
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #000000;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar-menu ul {
+    gap: 1rem;
+  }
+  .navbar-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+.navbar-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.6); /* Transparan */
+  backdrop-filter: blur(10px); /* Efek blur modern */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  display: none;
+  transition: background 0.3s ease;
+}
+
+  .navbar-menu.open {
+    display: flex;
+  }
+  .navbar-menu ul {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  .navbar-link {
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-link,
+  .navbar-hamburger span,
+  .navbar-menu,
+  .pro-navbar {
+    transition: none !important;
+    transform: none !important;
+  }
+}

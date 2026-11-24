@@ -1,0 +1,166 @@
+body, html {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-container {
+  padding-top: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+.detail-heading {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #000000;
+  text-align: center;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #DCDCDC;
+  border-radius: 0.5rem;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.detail-paragraph {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.detail-list-title {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.detail-list, .detail-ordered-list {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.detail-list {
+  list-style-type: disc;
+}
+
+.detail-ordered-list {
+  list-style-type: decimal;
+}
+
+.detail-list li, .detail-ordered-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.detail-conclusion {
+  font-weight: 600;
+  color: #28a745;
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-radius: 0.25rem;
+}
+
+.back-button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-button {
+  background-color: #0d6efd;
+  color: white;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #0b5ed7;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 640px) {
+  .detail-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0rem;
+  }
+  
+  .detail-heading {
+    font-size: 1.5rem;
+  }
+  
+  .section-heading {
+    font-size: 1.25rem;
+  }
+  
+  .detail-section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-list, .detail-ordered-list {
+    padding-left: 1.25rem;
+  }
+  
+  .back-button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .detail-section {
+    padding: 2rem;
+  }
+}

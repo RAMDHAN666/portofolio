@@ -1,0 +1,104 @@
+body, html {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
+
+.tugas-container {
+  padding-top: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+.tugas-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #000000 !important;
+}
+
+.tugas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.tugas-card {
+  display: block;
+  border: 1px solid #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  background-color: #DCDCDC;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.tugas-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  border-color: #d1d5db;
+}
+
+.tugas-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.tugas-card:hover .tugas-title {
+  color: #0d6efd;
+}
+
+@media (max-width: 640px) {
+  .tugas-container {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 5rem;
+  }
+  
+  .tugas-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tugas-card {
+    padding: 1.25rem;
+  }
+  
+  .tugas-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tugas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tugas-container {
+    padding-top: 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tugas-grid {
+    gap: 3rem;
+  }
+  
+  .tugas-card {
+    padding: 2rem;
+  }
+}

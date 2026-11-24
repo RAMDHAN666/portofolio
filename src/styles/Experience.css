@@ -1,0 +1,495 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.experience-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+  background: #f5f5f5; /* Light gray background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Page title */
+.experience-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.2rem 0 2rem;    /* Ubah margin-top agar lebih ke atas */
+  color: #1a1a1a;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Untuk mobile */
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.75rem;
+    margin: 0.5rem 0 1.25rem; /* Lebih ke atas di mobile */
+  }
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Vertical line on left */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #333333; /* Dark gray line */
+  border-radius: 2px;
+}
+
+/* Individual timeline card */
+.timeline-element {
+  position: relative;
+  background: #ffffff; /* Pure white card */
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5e5; /* Light gray border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+/* Hover effect */
+.timeline-element:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #d0d0d0;
+}
+
+/* Icon bubble on left of each card */
+.timeline-element::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 1.2rem;
+  width: 18px;
+  height: 18px;
+  background: #ffffff; /* White center */
+  border-radius: 50%;
+  border: 3px solid #333333; /* Dark gray border */
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-element:hover::before {
+  transform: scale(1.15);
+  background: #1a1a1a; /* Black on hover */
+  border-color: #ffffff;
+}
+
+/* Date styling */
+.timeline-element .date {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #666666; /* Medium gray */
+  margin-bottom: 0.5rem;
+}
+
+/* Job role/title */
+.timeline-element .role {
+  display: flex;
+  align-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a; /* Black title */
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Icon inside role */
+.timeline-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #333333; /* Dark gray icon */
+}
+
+/* Company / project name */
+.timeline-element .company {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  color: #4a4a4a; /* Medium-dark gray */
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+/* Paragraph description */
+.timeline-element .description {
+  font-size: 1rem;
+  color: #555555; /* Medium gray text */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Bullet-point details */
+.timeline-element .details-list {
+  margin: 0;
+  padding-left: 1rem;
+  list-style-type: disc;
+  color: #1a1a1a;
+}
+
+.timeline-element .details-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #555555;
+}
+
+/* Subsection title */
+.subsection-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a; /* Black title */
+  margin: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+
+/* Experience Page Styles */
+.experience-page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: #fafafa; /* Very light gray background */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.experience-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.experience-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #1a1a1a; /* Black title */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #666666; /* Medium gray subtitle */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 4rem;
+}
+
+.experience-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Experience Cards */
+.experience-card {
+  background: #ffffff; /* White card */
+  border: 2px solid #e5e5e5; /* Light gray border */
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1a1a1a, #333333, #666666); /* Black to gray gradient */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover::before {
+  transform: scaleX(1);
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  border-color: #d0d0d0;
+}
+
+/* Experience Header */
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a; /* Black title */
+  margin-bottom: 0.5rem;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  color: #4a4a4a; /* Medium-dark gray */
+  font-weight: 500;
+}
+
+.duration {
+  background: #e5e5e5; /* Light gray background */
+  color: #333333; /* Dark gray text */
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Experience Content */
+.experience-content {
+  margin-bottom: 1.5rem;
+}
+
+.job-description {
+  color: #555555; /* Medium gray text */
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Experience Footer */
+.experience-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d0d0d0; /* Light gray number */
+  font-family: 'Courier New', monospace;
+}
+
+/* -------- Responsive: tablets (max-width 768px) -------- */
+@media (max-width: 768px) {
+  .experience-page .container {
+    padding: 0 1rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-wrapper {
+    padding: 0 0.75rem;
+    margin: 1.5rem auto 3rem;
+  }
+
+  .experience-title {
+    font-size: 2rem;
+    margin: 1.5rem 0 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-element {
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+
+  .timeline-element::before {
+    left: -20px;
+    width: 14px;
+    height: 14px;
+    top: 1rem;
+    border-width: 2px;
+  }
+
+  .timeline-element .date {
+    font-size: 0.9rem;
+  }
+
+  .timeline-element .role {
+    font-size: 1.2rem;
+  }
+
+  .timeline-icon {
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+  }
+
+  .timeline-element .company {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-element .description {
+    font-size: 0.95rem;
+  }
+
+  .timeline-element .details-list li {
+    font-size: 0.9rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+}
+
+/* -------- Responsive: small phones (max-width 480px) -------- */
+@media (max-width: 480px) {
+  .experience-wrapper {
+    margin: -2rem auto 4rem;
+    padding: 0 0.5rem;
+  }
+
+  .experience-title {
+    font-size: 1.75rem;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .timeline-element {
+    padding: 0.75rem 0.75rem 0.75rem 1rem;
+  }
+
+  .timeline-element::before {
+    left: -16px;
+    width: 12px;
+    height: 12px;
+    top: 0.8rem;
+    border-width: 2px;
+  }
+
+  .timeline-element .date {
+    font-size: 0.85rem;
+  }
+
+  .timeline-element .role {
+    font-size: 1.1rem;
+  }
+
+  .timeline-icon {
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+  }
+
+  .timeline-element .company {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .timeline-element .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .timeline-element .details-list li {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .subsection-title {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.2s; }
+.experience-card:nth-child(3) { animation-delay: 0.3s; }
